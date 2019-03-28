@@ -33,51 +33,96 @@ Enjoy
  Example 1:
                     ...
                         {
+                        
                           field: 'TestOption',
+                          
                           header: "Test",
+                          
                           type: "autocomplete",
+                          
                           fk_prop: "Text",  //Shows from column that fk points this property
+                          
                           fk: "TestOption", // Points on that column
+                          
                           suggestions: 'SIF_TEST',  // Used for autocomplete and dropdowns
+                          
                           detailsShow: true,
+                          
                           required: true,
-                          routerField: "TestOption.Id", // Id which will be injected in route. 
+                          
+                          routerField: "TestOption.Id", // Id which will be injected in route.
+                          
                           routerLink: TEST_ROUTE, // path
+                          
                           width: '20%',
+                          
                           filter: false,
+                          
                           gridShow: false,
+                          
                           fk_prop2: null,
+                          
                           disabled: false,
+                          
                           sortable: false,
+                          
                           editShow: true,
+                          
                           additional_info: null,
+                          
                           multiple: false,
+                          
                           columns: 1,
+                          
                         },
+                        
                     ...
                     
  Example 2:
                     ...
                           {
+                          
                             field: 'Test2Option',
+                            
                             header: "Test 2",
+                            
                             type: "autocomplete",
+                            
                             fk_prop: "Text",
+                            
                             fk: "Test2Option",
+                            
                             suggestions: 'SIF_TEST2',
+                            
                             detailsShow: true,
+                            
                             required: false,
+                            
                             width: '20%',
+                            
                             filter: false,
+                            
                             gridShow: false,
+                            
                             fk_prop2: null,
+                            
                             disabled: false,
+                            
                             sortable: false,
+                            
                             editShow: true,
+                            
                             additional_info: [new KeyValue('filterBy', "TestOption"), new KeyValue('dependantField', "TestOption")], // Filter by is used for subseting result in autocomplete (ISuggestionService). dependantField is used for disabling field while dependant is null. 
+                            
                             multiple: false,
+                            
                             columns: 1,
+                            
                             routerField: null,
+                            
                             routerLink: null,
+                            
                           },
+                          
                     ...
+                    
