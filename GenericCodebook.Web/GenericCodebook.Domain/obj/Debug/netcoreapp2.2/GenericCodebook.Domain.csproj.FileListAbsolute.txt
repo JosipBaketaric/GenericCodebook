@@ -1,0 +1,12 @@
+C:\Users\josipba\Documents\CTK\GenericCodebook\GenericCodebook\GenericCodebook.Web\GenericCodebook.Domain\obj\Debug\netcoreapp2.2\GenericCodebook.Domain.csprojAssemblyReference.cache
+C:\Users\josipba\Documents\CTK\GenericCodebook\GenericCodebook\GenericCodebook.Web\GenericCodebook.Domain\obj\Debug\netcoreapp2.2\GenericCodebook.Domain.csproj.CoreCompileInputs.cache
+C:\Users\josipba\Documents\CTK\GenericCodebook\GenericCodebook\GenericCodebook.Web\GenericCodebook.Domain\obj\Debug\netcoreapp2.2\GenericCodebook.Domain.AssemblyInfoInputs.cache
+C:\Users\josipba\Documents\CTK\GenericCodebook\GenericCodebook\GenericCodebook.Web\GenericCodebook.Domain\obj\Debug\netcoreapp2.2\GenericCodebook.Domain.AssemblyInfo.cs
+C:\Users\josipba\Documents\CTK\GenericCodebook\GenericCodebook\GenericCodebook.Web\GenericCodebook.Domain\bin\Debug\netcoreapp2.2\GenericCodebook.Domain.deps.json
+C:\Users\josipba\Documents\CTK\GenericCodebook\GenericCodebook\GenericCodebook.Web\GenericCodebook.Domain\bin\Debug\netcoreapp2.2\GenericCodebook.Domain.dll
+C:\Users\josipba\Documents\CTK\GenericCodebook\GenericCodebook\GenericCodebook.Web\GenericCodebook.Domain\bin\Debug\netcoreapp2.2\GenericCodebook.Domain.pdb
+C:\Users\josipba\Documents\CTK\GenericCodebook\GenericCodebook\GenericCodebook.Web\GenericCodebook.Domain\bin\Debug\netcoreapp2.2\Newtonsoft.Json.dll
+C:\Users\josipba\Documents\CTK\GenericCodebook\GenericCodebook\GenericCodebook.Web\GenericCodebook.Domain\bin\Debug\netcoreapp2.2\Newtonsoft.Json.xml
+C:\Users\josipba\Documents\CTK\GenericCodebook\GenericCodebook\GenericCodebook.Web\GenericCodebook.Domain\obj\Debug\netcoreapp2.2\GenericCodebook.Domain.csproj.CopyComplete
+C:\Users\josipba\Documents\CTK\GenericCodebook\GenericCodebook\GenericCodebook.Web\GenericCodebook.Domain\obj\Debug\netcoreapp2.2\GenericCodebook.Domain.dll
+C:\Users\josipba\Documents\CTK\GenericCodebook\GenericCodebook\GenericCodebook.Web\GenericCodebook.Domain\obj\Debug\netcoreapp2.2\GenericCodebook.Domain.pdb

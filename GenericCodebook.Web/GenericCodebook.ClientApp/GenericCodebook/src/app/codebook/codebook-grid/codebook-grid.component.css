@@ -1,0 +1,27 @@
+.table-paginator-ul li {
+    display: inline;
+}
+
+.table-pagination-number {
+    margin-right: 1%;
+    color: blue;
+}
+
+.table-pagination-number:hover{
+    cursor: pointer;
+}
+
+.active-page {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.inactive-page {
+
+}
+
+.inactive-page-far {
+    font-size: x-small;
+    margin-right: 0.5%;
+}

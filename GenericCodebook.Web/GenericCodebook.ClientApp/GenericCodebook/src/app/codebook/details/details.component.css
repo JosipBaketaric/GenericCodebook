@@ -1,0 +1,18 @@
+.codebook-details-container {
+    position: fixed;
+    top: 50%;
+    left:50%;
+    z-index: 1000;
+    background-color: white;
+
+}
+
+.codebook-details-body-header {
+    margin-right: 2%;
+    font-weight: bold;
+}
+
+.codebook-details-body-data {
+    font-style: italic;
+}
+

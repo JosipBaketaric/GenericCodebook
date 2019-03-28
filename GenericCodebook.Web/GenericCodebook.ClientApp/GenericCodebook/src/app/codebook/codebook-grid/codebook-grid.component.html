@@ -1,0 +1,72 @@
+<div class="codebook-grid-container">
+
+    <div class="codebook-content" *ngIf="data != null">
+
+        <div class="codebook-header">
+            <div class="codebook-header-title">
+                {{data.title}}
+            </div>
+            <div class="codebook-header-buttons">
+                <button (click)="showCreate()">Create</button>
+            </div>
+        </div>
+
+        <div class="codebook-search-btns">
+            <button class="codebook-search-btn" (click)="getFiltered()">Search</button>
+        </div>
+
+        <div class="codebook-filters">
+            <app-codebook-filters [(filter)]="filter" [colDefs]="data.columnDefs">
+            </app-codebook-filters>
+        </div>
+
+        <div class="codebook-table" *ngIf="codebookModel != null && codebookModel.items != null">
+            <table class="table table-striped table-bordered table-sm">
+                <thead class="thead-dark">
+                    <tr>
+                        <th *ngFor="let colDef of getGridColDefs()">{{colDef.header}}</th>
+                        <th></th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of codebookModel.items">
+                        <td *ngFor="let colDef of getGridColDefs()">
+                            {{item[colDef.field]}}
+                        </td>
+
+                        <td class="codebook-table-btns">
+                            <button class="codebook-table-btn-info" (click)="showInfo(item)">Info</button>
+                            <button class="codebook-table-btn-edit" (click)="showEdit(item)">Edit</button>
+                            <button class="codebook-table-btn-delete" (click)="deleteRow(item)">Delete</button>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="table-pagination">
+                <ul class="table-paginator-ul">
+                    <li class="table-pagination-number" *ngFor="let i of getNumberOfPages()">
+                        <i [ngClass]="getClass(i)" (click)="loadLazy(i)">
+                            {{i}}
+                        </i>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <app-details [(model)]="infoModel" [colDefs]="data.columnDefs" [sifName]="data.tableName">
+    </app-details>
+
+    <app-codebook-edit [(model)]="editModel" [colDefs]="data.columnDefs" [sifName]="data.tableName"
+        [(createMode)]="createMode">
+    </app-codebook-edit>
+
+
+</div>

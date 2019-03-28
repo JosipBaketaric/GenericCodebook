@@ -1,0 +1,30 @@
+<div class="codebook-filters">
+
+  <div *ngFor="let colDef of getGridFilters()">
+
+    <div [ngSwitch]="colDef.type">
+
+      <div *ngSwitchCase="'string'">
+        <input type="text" [(ngModel)]="filter[colDef.field]" placeholder="{{colDef.header}}">
+      </div>
+      <div *ngSwitchCase="'number'">
+          <input type="number" [(ngModel)]="filter[colDef.field]" placeholder="{{colDef.header}}">
+      </div>
+
+      <div *ngSwitchCase="'checkbox'">checkbox</div>
+
+      <div *ngSwitchCase="'dropdown'">dropdown</div>
+
+      <div *ngSwitchCase="'autocomplete'">autocomplete</div>
+
+      <div *ngSwitchCase="'datepicker'">datepicker</div>
+      
+      <div *ngSwitchCase="'multiselect'">multiselect</div>
+
+      <div *ngSwitchDefault>string - default</div>
+
+    </div>
+
+  </div>
+
+</div>

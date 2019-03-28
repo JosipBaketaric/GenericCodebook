@@ -1,0 +1,46 @@
+<div class="codebook-details-container" *ngIf="colDefs != null && model != null">
+
+  <div class="codebook-details-header">
+    <button (click)="close()">X</button>
+    <h2>Info</h2>
+  </div>
+
+  <div class="codebook-details-body" *ngFor="let colDef of getDetailsColDefs()">
+
+    <div [ngSwitch]="colDef.type">
+
+      <div *ngSwitchCase="'string'">
+        <span class="codebook-details-body-header">{{colDef.header}}</span>
+        <span class="codebook-details-body-data">{{model[colDef.field]}}</span>
+      </div>
+
+      <div *ngSwitchCase="'number'">
+        <span class="codebook-details-body-header">{{colDef.header}}</span>
+        <span class="codebook-details-body-data">{{model[colDef.field]}}</span>
+      </div>
+
+      <div *ngSwitchCase="'checkbox'">checkbox</div>
+
+      <div *ngSwitchCase="'dropdown'">dropdown</div>
+
+      <div *ngSwitchCase="'autocomplete'">autocomplete</div>
+
+      <div *ngSwitchCase="'datepicker'">datepicker</div>
+
+      <div *ngSwitchCase="'multiselect'">multiselect</div>
+
+      <div *ngSwitchDefault>
+        <span class="codebook-details-body-header">{{colDef.header}}: </span>
+        <span class="codebook-details-body-data">{{model[colDef.field]}}</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="codebook-edit-footer">
+
+  </div>
+
+
+</div>

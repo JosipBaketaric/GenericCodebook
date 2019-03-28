@@ -1,0 +1,171 @@
+<!-- <p-dialog #dialog width="1000" [header]="popupHeader" [visible]="popupCodebook != undefined || popupCodebook != null"
+  showEffect="fade" [modal]="true" [responsive]="true" (closeOnEscape)="true" (onHide)="hideCallback()" (onShow)="showCallback()"
+  [contentStyle]="popupStyle"> -->
+
+<div class="codebook-edit-grid" *ngIf="model != null && colDefs != null">
+
+  <div class="codebook-edit-header">
+    <button (click)="close()">X</button>
+      <h5>Edit/Create</h5>
+  </div>
+
+  <div class="codebook-edit-body">
+
+    <form #form="ngForm" (ngSubmit)="save()">
+      <div *ngFor="let colDef of getEditColDefs()">
+
+        <div class="codebook-edit-body-row" [ngSwitch]="colDef.type">
+
+          <div *ngSwitchCase="'string'">
+            <span class="codebook-edit-body-row-header">{{colDef.header}}</span>
+            <input name="{{colDef.field}}" class="codebook-edit-body-row-data" type="text"
+              [(ngModel)]="model[colDef.field]" placeholder="{{colDef.header}}">
+            <!-- 
+            <input type="text"
+              pInputText 
+              size="30" 
+              class="form-control" 
+              [(ngModel)]="model[colDef.field]"
+              [disabled]="isDisabled(colDef)"
+              required="{{colDef.required}}" 
+              name="{{colDef.header}}" 
+              pattern="{{colDef.pattern}}"> 
+          -->
+          </div>
+
+          <div *ngSwitchCase="'number'">
+            <span class="codebook-edit-body-row-header">{{colDef.header}}</span>
+            <input type="number" [(ngModel)]="model[colDef.field]" placeholder="{{colDef.header}}">
+            <!-- 
+            <input 
+              type="number" 
+              pInputText 
+              size="30" 
+              class="form-control" 
+              [disabled]="isDisabled(colDef)"
+              [(ngModel)]="model[colDef.field]"
+              name="{{colDef.header}}" 
+              pattern="{{colDef.pattern}}"> 
+          -->
+          </div>
+
+          <div *ngSwitchCase="'checkbox'">
+            <span class="codebook-edit-body-row-header">{{colDef.header}}</span>
+            <input type="checkbox" [(ngModel)]="model[colDef.field]">
+            <!-- 
+            <p-triStateCheckbox 
+              [(ngModel)]="model[colDef.field]" 
+              binary="true" 
+              required="{{colDef.required}}"
+              [disabled]="isDisabled(colDef)"
+              name="{{colDef.field}}">
+            </p-triStateCheckbox> 
+            -->
+          </div>
+
+          <div *ngSwitchCase="'dropdown'">
+            dropdown
+            <!-- 
+            <p-dropdown 
+              [(ngModel)]="model[colDef.field]" 
+              [options]="autocompleteSuggestions[colDef.suggestions]"
+              optionLabel="Text" 
+              dataKey="Id" 
+              placeholder="{{colDef.header}}" 
+              required="{{colDef.required}}" 
+              [disabled]="isDisabled(colDef)""
+              name="{{colDef.header}}">
+          </p-dropdown> 
+        -->
+          </div>
+
+          <div *ngSwitchCase="'autocomplete'">
+            autocomplete
+            <!-- 
+            <p-autoComplete 
+              [(ngModel)]="model[colDef.field]" 
+              [suggestions]="autocompleteSuggestions[colDef.suggestions]"
+              field="Text" 
+              dataKey="Id" 
+              [minLength]="2" 
+              [disabled]="isDisabled(colDef)"
+              placeholder="{{colDef.header}}" 
+              [multiple]="colDef.multiple" 
+              [dropdown]="true" 
+              name="{{colDef.header}}"
+              required="{{colDef.required}}" 
+              dropdownMode="current" 
+              (onClear)="clearModel(colDef)" 
+              (completeMethod)="loadAutocompleteSuggestions(colDef, $event.query)">
+          </p-autoComplete> 
+        -->
+          </div>
+
+          <div *ngSwitchCase="'datepicker'">
+            datepicker
+            <!--
+                  <p-calendar 
+                    [locale]="locale" 
+                    dateFormat="dd.mm.yy" 
+                    dataType="string" 
+                    [(ngModel)]="model[colDef.field]"
+                    [disabled]="isDisabled(colDef)"
+                    [monthNavigator]="true" [yearNavigator]="true" 
+                    yearRange="1900:2030" 
+                    [showIcon]="true"
+                    inputStyleClass="calendar-input" 
+                    name="{{colDef.header}}">
+                </p-calendar>
+            -->
+          </div>
+
+          <div *ngSwitchCase="'multiselect'">
+            multiselect
+            <!-- 
+            <p-multiSelect 
+              [options]="multiSelectSuggestions[colDef.suggestions]" 
+              [panelStyle]="{maxWidth:'12em'}"
+              [(ngModel)]="model[colDef.field]" 
+              [disabled]="isDisabled(colDef)"
+              name="{{colDef.header}}" 
+              dataKey="Id" 
+              optionLabel="Text" 
+              defaultLabel="{{colDef.header}}">
+          </p-multiSelect> 
+        -->
+          </div>
+
+          <div *ngSwitchDefault>
+            string - default
+            <!-- 
+            <input type="text"
+              pInputText 
+              size="30" 
+              class="form-control" 
+              [(ngModel)]="model[colDef.field]"
+              [disabled]="isDisabled(colDef)"
+              required="{{colDef.required}}" 
+              name="{{colDef.header}}" 
+              pattern="{{colDef.pattern}}"> 
+          -->
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="codebook-edit-body-footer">
+        <button type="submit" [disabled]="!form.form.valid">Save</button>
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="codebook-edit-footer">
+
+  </div>
+
+</div>
+
+<!-- </p-dialog> -->
