@@ -23,7 +23,7 @@ Enjoy
  
  !Important!
  Not all functionalities are implemented because I didn't want to harcode this to one framework. 
- I order to fully use this you have to implement this in regards to yours framework.
+ In order to fully use this you have to implement this in regards to yours framework.
  
  TODO: IMPLEMENT ROUTING BY ID BETWEEN CODEBOOKS
   
